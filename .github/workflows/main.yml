@@ -17,9 +17,9 @@ jobs:
     - name: install pynt cli
       run: | 
         python3 -m pip install --upgrade pyntcli 
-    - name: get goat collection 
+    - name: get postman_collection collection 
       run: | 
-        curl https://raw.githubusercontent.com/pynt-io/pynt/main/goat_functional_tests/goat.postman_collection.json -o goat.json 
+        curl https://raw.githubusercontent.com/ishaquee/Pynt_CICD/main/New%20Collection.postman_collection.json -o postman_collection.json 
     - name: run pynt with newman integration 
       run: | 
-        pynt newman --collection goat.json --reporters
+        pynt newman --collection postman_collection.json --reporters
